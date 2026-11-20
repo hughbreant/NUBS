@@ -65,7 +65,7 @@ NUBS/
 
 **Installation**
  Clone the repository:
-```bash
+``` bash
 git clone https://github.com/hughbreant/NUBS.git
 cd NUBS
 ```
