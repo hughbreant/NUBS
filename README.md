@@ -128,15 +128,15 @@ Current Security Guarantees
  _For detailed security analysis, see ***docs\phase_4_testing\security_review_v0_1.md***_
 
 ## Documentation
-Core Logic: docs/phase\_2\_core/core\_logic\_spec\_v0\_1.md
+Core Logic: ***docs\phase_2_core\core_logic_spec_v0_1.md***
 
-Bridge Manager: docs/phase\_2\_core/bridge\_manager\_spec\_v0\_1.md
+Bridge Manager: ***docs\phase_2_core\bridge_manager_spec_v0_1.md***
 
-Dashboard UI: docs/phase\_3\_ui/dashboard\_spec\_v0\_1.md
+Dashboard UI: ***docs\phase_3_ui\dashboard_spec_v0_1.md***
 
-Testing: docs/phase\_4\_testing/e2e\_testing\_spec\_v0\_1.md
+Testing: ***docs\phase_4_testing\e2e_testing_spec_v0_1.md***
 
-Security: docs/phase\_4\_testing/security\_review\_v0\_1.md
+Security: ***docs\phase_4_testing\security_review_v0_1.md***
 
 ## Contributing
 This project follows a strict session-based workflow. See HANDOFF\_v0\_8.md for the current project status and next steps.
