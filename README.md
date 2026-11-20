@@ -37,7 +37,8 @@ Lightweight: No heavy dependencies, runs on standard Python
 │ - Executes termination (kill, wipe memory) │
 └───────────────────────────────────────────────────┘
 
-```## Project Structure
+## Project Structure
+```
 NUBS/
 ├── src/
 │ ├── core/
