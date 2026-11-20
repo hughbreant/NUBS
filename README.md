@@ -7,7 +7,9 @@ AI Personal Kill Switch – Monitor, Bridge, and Safely Terminate AI Processes
 NUBS (Normal Users Bridge-Switch) is a lightweight, Python-based system designed to give normal users absolute control over AI processes. It provides a "bridge" to safely interact with AI systems while maintaining a "kill switch" that can instantly isolate or terminate processes in response to resource spikes, security breaches, or manual overrides.
 
 ## Key Features
-Three-State Safety Model: ACTIVE (🟢), ISOLATED (🟡), TERMINATED (🔴)
+**Three-State Safety Model:**
+|ACTIVE🟢| ISOLATED🟡|TERMINATED🔴|
+| --- | --- | --- |
 Automatic Triggers: CPU monitoring and unauthorized access detection
 Manual Overrides: Admin dashboard for real-time control
 One-Way Termination: Once killed, the system requires a full restart (security guarantee)
@@ -25,8 +27,6 @@ flowchart TD
     UI --> Engine
     Engine --> Bridge
 ```
-
-
 
 ## Project Structure
 ```
@@ -145,25 +145,3 @@ Built for normal users who want control over their AI systems.
 Current Version: v0.8 (Phase 4 Complete)
 
 Last Updated: November 20, 2026
-
-- Main item
-  - Sub-item one
-  - Sub-item two
-    - Sub-sub-item
-
-*This is the first sentence.*  
-*This is the second sentence.*  
-*This is the third sentence.*
-
-
-
-
-
-
-
-
-
-
-
-
-
