@@ -1,17 +1,17 @@
 ## NUBS: Normal Users Bridge-Switch
-\*\*AI Personal Kill Switch – Monitor, Bridge, and Safely Terminate AI Processes\*\*
-\[!\[Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-\[!\[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+AI Personal Kill Switch – Monitor, Bridge, and Safely Terminate AI Processes
+[Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 NUBS (Normal Users Bridge-Switch) is a lightweight, Python-based system designed to give normal users absolute control over AI processes. It provides a "bridge" to safely interact with AI systems while maintaining a "kill switch" that can instantly isolate or terminate processes in response to resource spikes, security breaches, or manual overrides.
 
 ## Key Features
-\- \*\*Three-State Safety Model\*\*: ACTIVE (🟢), ISOLATED (🟡), TERMINATED (🔴)
-\- \*\*Automatic Triggers\*\*: CPU monitoring and unauthorized access detection
-\- \*\*Manual Overrides\*\*: Admin dashboard for real-time control
-\- \*\*One-Way Termination\*\*: Once killed, the system requires a full restart (security guarantee)
-\- \*\*Lightweight\*\*: No heavy dependencies, runs on standard Python
+Three-State Safety Model: ACTIVE (🟢), ISOLATED (🟡), TERMINATED (🔴)
+Automatic Triggers: CPU monitoring and unauthorized access detection
+Manual Overrides: Admin dashboard for real-time control
+One-Way Termination: Once killed, the system requires a full restart (security guarantee)
+Lightweight: No heavy dependencies, runs on standard Python
 
 ## Architecture
 ┌───────────────────────────────────────────────────┐
