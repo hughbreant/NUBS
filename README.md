@@ -64,8 +64,10 @@ NUBS/
 - pip (Python package manager)
 
 **Installation**
+
  Clone the repository:
-``` bash
+```
+bash
 git clone https://github.com/hughbreant/NUBS.git
 cd NUBS
 ```
