@@ -59,10 +59,9 @@ NUBS/
 ```
 
 ## Quick Start
-
-## Prerequisites
-\- Python 3.8 or higher
-\- pip (Python package manager)
+**Prerequisites**
+- Python 3.8 or higher
+- pip (Python package manager)
 
 ## Installation
 1\. \*\*Clone the repository\*\*:
