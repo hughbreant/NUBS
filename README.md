@@ -39,7 +39,7 @@ Lightweight: No heavy dependencies, runs on standard Python
 
 ```mermaid
 flowchart LR
-    Client([ NUBS Dashboard (UI) | src/ui/dashboard\_app\_v0\_1.py]) --> Gateway[Kill Switch Engine (State Machine) │src/core/kill\_switch\_engine\_v0\_2.py │ - Manages state transitions (ACTIVE ↔ ISOLATED ↔ TERMINATED)│ - Evaluates triggers (CPU, unauthorized access) │ - Enforces security locks │  ]
+    Client([ NUBS Dashboard (UI) src/ui/dashboard_app_v0_1.py]) --> Gateway[Kill Switch Engine (State Machine) src/core/kill_switch_engine_v0_2.py - Manages state transitions (ACTIVE ↔ ISOLATED ↔ TERMINATED) - Evaluates triggers (CPU, unauthorized access) - Enforces security locks]
     Gateway --> Auth[Auth Service]
     ```
 
