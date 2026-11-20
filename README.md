@@ -79,7 +79,7 @@ pip install streamlit
 
 Launch the NUBS dashboard:
 ```
-streamlit run src/ui/dashboard\_app\_v0\_1.py
+streamlit run src/ui/dashboard_app_v0_1.py
 ```
 
 _The dashboard will open in your browser at http://localhost:8501_
