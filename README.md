@@ -10,7 +10,7 @@ AI Personal Kill Switch – Monitor, Bridge, and Safely Terminate AI Processes
 
 ## Key Features
 **Three-State Safety Model:**
-|ACTIVE🟢| ISOLATED🟡|TERMINATED🔴|
+|ACTIVE 🟢| ISOLATED 🟡|TERMINATED 🔴|
 | --- | --- | --- |
 
 - Automatic Triggers: CPU monitoring and unauthorized access detection
