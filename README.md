@@ -76,6 +76,7 @@ pip install streamlit
 ```
 
 **Running the Dashboard**
+
 Launch the NUBS dashboard:
 ```
 streamlit run src/ui/dashboard\_app\_v0\_1.py
