@@ -37,6 +37,16 @@ Lightweight: No heavy dependencies, runs on standard Python
 │ - Executes termination (kill, wipe memory) │
 └───────────────────────────────────────────────────┘
 
+```mermaid
+flowchart LR
+    Client([Web / Mobile Client]) --> Gateway[API Gateway]
+    Gateway --> Auth[Auth Service]
+    Gateway --> Core[Core API]
+    Core --> DB[(Primary Database)]
+    Core --> Cache[(Redis Cache)]
+```
+
+
 ## Project Structure
 ```
 NUBS/
