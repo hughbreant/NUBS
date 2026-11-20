@@ -38,18 +38,20 @@ Lightweight: No heavy dependencies, runs on standard Python
 └───────────────────────────────────────────────────┘
 
 ```mermaid
-flowchart LR
-    Client([ NUBS Dashboard UI src/ui/dashboard_app_v0_1.py]) --> Gateway[Kill Switch Engine State Machine src/core/kill_switch_engine_v0_2.py - Manages state transitions ACTIVE ↔ ISOLATED ↔ TERMINATED)- Evaluates triggers CPU, unauthorized access - Enforces security locks]
-    Gateway --> Auth[Auth Service]
-    ```
+erDiagram
+    USERS ||--o{ ORDERS : places
+    ORDERS ||--|{ ORDER_ITEMS : contains
 
-```mermaid
-flowchart LR
-    Client([Web / Mobile Client]) --> Gateway[API Gateway]
-    Gateway --> Auth[Auth Service]
-    Gateway --> Core[Core API]
-    Core --> DB[(Primary Database)]
-    Core --> Cache[(Redis Cache)]
+    USERS {
+        int id PK
+        string email
+        datetime created_at
+    }
+    ORDERS {
+        int id PK
+        int user_id FK
+        decimal total
+    }
 ```
 
 
