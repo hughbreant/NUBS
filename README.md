@@ -79,43 +79,66 @@ The dashboard will open in your browser at http://localhost:8501
 ## Usage Guide
 Understanding the States
 State      | Indicator |  Description                                               | User Action
+
 ACTIVE     |    🟢    |   Normal operation. Bridge is open, all processes running. | Monitor system
+
 ISOLATED   |    🟡    |   Sandboxed. Network revoked, processes suspended.         | Review logs, perform admin recovery
+
 TERMINATED |    🔴    |   Hard kill. Processes terminated, memory wiped.           | Restart application
 
 ## Dashboard Controls
 The dashboard provides three manual control buttons:
+
 *Simulate CPU Spike (>90%): Triggers automatic isolation (useful for testing).
+
 *Simulate Security Breach: Triggers immediate termination (useful for testing).
+
 *Manual Admin Recovery: Restores the system from ISOLATED to ACTIVE (only available when isolated).
+
 Note: All controls are disabled when the system is TERMINATED.
 
 ## Testing
 Run Unit Tests
+
 python tests/test_core_v0_1.py
+
 Expected output: 9 tests passing
+
 Run End-to-End Test
+
 python tests/test_e2e_v0_1.py
+
 Expected output: 1 comprehensive workflow test passing
 
 ## Security Considerations
 Current Security Guarantees
+
 *One-Way Termination: Once TERMINATED, the system cannot be recovered without a full restart.
+
 *rocess Isolation: All managed processes are immediately suspended or killed on state transition.
+
 *Trigger Safety: No triggers can affect a terminated system.
 
 ## Future Security Enhancements
 *Add user authentication to the dashboard
+
 *Implement persistent audit logging
+
 *Add post-termination registration locks
+
 *Implement rate limiting on trigger evaluations
+
 For detailed security analysis, see docs/phase\_4\_testing/security\_review\_v0\_1.md.
 
 ## Documentation
 Core Logic: docs/phase\_2\_core/core\_logic\_spec\_v0\_1.md
+
 Bridge Manager: docs/phase\_2\_core/bridge\_manager\_spec\_v0\_1.md
+
 Dashboard UI: docs/phase\_3\_ui/dashboard\_spec\_v0\_1.md
+
 Testing: docs/phase\_4\_testing/e2e\_testing\_spec\_v0\_1.md
+
 Security: docs/phase\_4\_testing/security\_review\_v0\_1.md
 
 ## Contributing
