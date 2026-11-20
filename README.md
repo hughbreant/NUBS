@@ -14,6 +14,8 @@ One-Way Termination: Once killed, the system requires a full restart (security g
 Lightweight: No heavy dependencies, runs on standard Python
 
 ## Architecture
+```mermaid
+flowchart LR
 ┌───────────────────────────────────────────────────┐
 │ NUBS Dashboard (UI) │
 │ src/ui/dashboard\_app\_v0\_1.py │
@@ -36,6 +38,7 @@ Lightweight: No heavy dependencies, runs on standard Python
 │ - Executes isolation (suspend, revoke network) │
 │ - Executes termination (kill, wipe memory) │
 └───────────────────────────────────────────────────┘
+```
 
 ```mermaid
 flowchart LR
