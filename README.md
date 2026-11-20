@@ -42,19 +42,19 @@ Lightweight: No heavy dependencies, runs on standard Python
 NUBS/
 ├── src/
 │ ├── core/
-│ │ ├── kill\_switch\_engine\_v0\_2.py # State machine \& trigger logic
-│ │ └── bridge\_manager\_v0\_1.py # Process execution layer
+│ │ ├── kill_switch_engine_v0_2.py # State machine & trigger logic
+│ │ └── bridge_manager_v0_1.py # Process execution layer
 │ └── ui/
-│ └── dashboard\_app\_v0\_1.py # Streamlit dashboard
+│ └── dashboard_app_v0_1.py # Streamlit dashboard
 ├── tests/
-│ ├── test\_core\_v0\_1.py # Unit tests (9 tests)
-│ └── test\_e2e\_v0\_1.py # End-to-end workflow test
+│ ├── test_core_v0_1.py # Unit tests (9 tests)
+│ └── test_e2e_v0_1.py # End-to-end workflow test
 ├── docs/
-│ ├── phase\_2\_core/ # Core logic documentation
-│ ├── phase\_3\_ui/ # UI documentation
-│ └── phase\_4\_testing/ # Testing \& security docs
-├── scripts/ # Deployment scripts (Phase 5)
-├── HANDOFF\_v0\_8.md # Project handoff tracker
+│ ├── phase_2_core # Core logic documentation
+│ ├── phase_3_ui # UI documentation
+│ └── phase_4_testing # Testing & security docs
+├── scripts # Deployment scripts (Phase 5)
+├── HANDOFF.md # Project handoff tracker
 └── README.md # This file
 ```
 
