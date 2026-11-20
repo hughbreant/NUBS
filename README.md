@@ -1,19 +1,19 @@
-**## NUBS: Normal Users Bridge-Switch**
+## NUBS: Normal Users Bridge-Switch
 \*\*AI Personal Kill Switch – Monitor, Bridge, and Safely Terminate AI Processes\*\*
 \[!\[Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 \[!\[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**## Overview**
+## Overview
 NUBS (Normal Users Bridge-Switch) is a lightweight, Python-based system designed to give normal users absolute control over AI processes. It provides a "bridge" to safely interact with AI systems while maintaining a "kill switch" that can instantly isolate or terminate processes in response to resource spikes, security breaches, or manual overrides.
 
-**### Key Features**
+## Key Features
 \- \*\*Three-State Safety Model\*\*: ACTIVE (🟢), ISOLATED (🟡), TERMINATED (🔴)
 \- \*\*Automatic Triggers\*\*: CPU monitoring and unauthorized access detection
 \- \*\*Manual Overrides\*\*: Admin dashboard for real-time control
 \- \*\*One-Way Termination\*\*: Once killed, the system requires a full restart (security guarantee)
 \- \*\*Lightweight\*\*: No heavy dependencies, runs on standard Python
 
-**## Architecture**
+## Architecture
 ┌───────────────────────────────────────────────────┐
 │ NUBS Dashboard (UI) │
 │ src/ui/dashboard\_app\_v0\_1.py │
@@ -38,61 +38,31 @@ NUBS (Normal Users Bridge-Switch) is a lightweight, Python-based system designed
 └───────────────────────────────────────────────────┘
 \---
 
-\## Project Structure
-
+## Project Structure
 NUBS/
-
 ├── src/
-
 │ ├── core/
-
 │ │ ├── kill\_switch\_engine\_v0\_2.py # State machine \& trigger logic
-
 │ │ └── bridge\_manager\_v0\_1.py # Process execution layer
-
 │ └── ui/
-
 │ └── dashboard\_app\_v0\_1.py # Streamlit dashboard
-
 ├── tests/
-
 │ ├── test\_core\_v0\_1.py # Unit tests (9 tests)
-
 │ └── test\_e2e\_v0\_1.py # End-to-end workflow test
-
 ├── docs/
-
 │ ├── phase\_2\_core/ # Core logic documentation
-
 │ ├── phase\_3\_ui/ # UI documentation
-
 │ └── phase\_4\_testing/ # Testing \& security docs
-
 ├── scripts/ # Deployment scripts (Phase 5)
-
 ├── HANDOFF\_v0\_8.md # Project handoff tracker
-
 └── README.md # This file
-
-
-
-
-
 \---
 
+## Quick Start
 
-
-\## 🚀 Quick Start
-
-
-
-\### Prerequisites
-
+## Prerequisites
 \- Python 3.8 or higher
-
 \- pip (Python package manager)
-
-
 
 ## Installation
 1\. \*\*Clone the repository\*\*:
