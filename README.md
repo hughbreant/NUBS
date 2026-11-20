@@ -134,7 +134,7 @@ Testing: docs\phase_4_testing\e2e_testing_spec_v0_1.md
 Security: docs\phase_4_testing\security_review_v0_1.md
 
 ## Contributing
-This project follows a strict session-based workflow. See HANDOFF\_v0\_8.md for the current project status and next steps.
+This project follows a strict session-based workflow. See HANDOFF.md for the current project status and next steps.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
