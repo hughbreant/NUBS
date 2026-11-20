@@ -1,0 +1,6 @@
+# NUBS Dependencies
+# Core UI Framework
+streamlit>=1.28.0
+
+# Note: Testing relies on Python's built-in `unittest` module, 
+# so no additional testing frameworks are required for basic execution.
