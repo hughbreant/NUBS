@@ -126,7 +126,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 Built for normal users who want control over their AI systems.
+
 Current Version: v0.8 (Phase 4 Complete)
+
 Last Updated: November 20, 2026
 
 
