@@ -124,7 +124,7 @@ Current Security Guarantees
 - *Implement persistent audit logging*
 - *Add post-termination registration locks*
 - *Implement rate limiting on trigger evaluations*
-_*For detailed security analysis, see docs/phase_4_testing\security\_review\_v0\_1.md.*_
+*_For detailed security analysis, see docs/phase_4_testing\security\_review\_v0\_1.md._*
 
 ## Documentation
 Core Logic: docs/phase\_2\_core/core\_logic\_spec\_v0\_1.md
