@@ -65,17 +65,22 @@ NUBS/
 
 **Installation**
 
- Clone the repository:
+ 1. Clone the repository:
 ```
-bash
 git clone https://github.com/hughbreant/NUBS.git
 cd NUBS
 ```
-2\. Install dependencies:
-&#x20;  pip install streamlit
-Running the Dashboard
+2. Install dependencies:
+```
+pip install streamlit
+```
+
+**Running the Dashboard**
 Launch the NUBS dashboard:
+```
 streamlit run src/ui/dashboard\_app\_v0\_1.py
+```
+
 The dashboard will open in your browser at http://localhost:8501
 
 ## Usage Guide
