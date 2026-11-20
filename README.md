@@ -77,16 +77,7 @@ streamlit run src/ui/dashboard\_app\_v0\_1.py
 The dashboard will open in your browser at http://localhost:8501
 
 ## Usage Guide
-Understanding the States
-State      | Indicator |  Description                                               | User Action
-
-ACTIVE     |    🟢    |   Normal operation. Bridge is open, all processes running. | Monitor system
-
-ISOLATED   |    🟡    |   Sandboxed. Network revoked, processes suspended.         | Review logs, perform admin recovery
-
-TERMINATED |    🔴    |   Hard kill. Processes terminated, memory wiped.           | Restart application
-
-
+**Understanding the States**
 | State | Indicator | Description | User Action |
 | --- | --- | --- | --- |
 | ACTIVE | 🟢 | Normal operation. Bridge is open, all processes running. | Monitor system |
