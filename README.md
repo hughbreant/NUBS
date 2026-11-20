@@ -120,10 +120,10 @@ Current Security Guarantees
 *Trigger Safety: No triggers can affect a terminated system.
 
 ## Future Security Enhancements
-- *Add user authentication to the dashboard*
-- *Implement persistent audit logging*
-- *Add post-termination registration locks*
-- *Implement rate limiting on trigger evaluations*
+- *Add user authentication to the dashboard.
+- *Implement persistent audit logging.
+- *Add post-termination registration locks.
+- *Implement rate limiting on trigger evaluations.
 *_For detailed security analysis, see docs/phase_4_testing\security\_review\_v0\_1.md._*
 
 ## Documentation
