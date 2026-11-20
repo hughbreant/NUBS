@@ -14,29 +14,6 @@ One-Way Termination: Once killed, the system requires a full restart (security g
 Lightweight: No heavy dependencies, runs on standard Python
 
 ## Architecture
-┌───────────────────────────────────────────────────┐
-│ NUBS Dashboard (UI) │
-│ src/ui/dashboard\_app\_v0\_1.py │
-└────────────────────┬──────────────────────────────┘
-│
-▼
-┌───────────────────────────────────────────────────┐
-│ Kill Switch Engine (State Machine) │
-│ src/core/kill\_switch\_engine\_v0\_2.py │
-│ - Manages state transitions (ACTIVE ↔ ISOLATED ↔ TERMINATED)│
-│ - Evaluates triggers (CPU, unauthorized access) │
-│ - Enforces security locks │
-└────────────────────┬──────────────────────────────┘
-│
-▼
-┌───────────────────────────────────────────────────┐
-│ Bridge Manager (Execution Layer) │
-│ src/core/bridge\_manager\_v0\_1.py │
-│ - Manages process registry │
-│ - Executes isolation (suspend, revoke network) │
-│ - Executes termination (kill, wipe memory) │
-└───────────────────────────────────────────────────┘
-
 ```mermaid
 flowchart TD
     UI["<b>NUBS Dashboard (UI)</b><br/><code>src/ui/dashboard_app_v0_1.py</code>"]
