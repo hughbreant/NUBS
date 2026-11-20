@@ -38,21 +38,17 @@ Lightweight: No heavy dependencies, runs on standard Python
 └───────────────────────────────────────────────────┘
 
 ```mermaid
-erDiagram
-    USERS ||--o{ ORDERS : places
-    ORDERS ||--|{ ORDER_ITEMS : contains
+flowchart TD
+    UI["<b>NUBS Dashboard (UI)</b><br/><code>src/ui/dashboard_app_v0_1.py</code>"]
 
-    USERS {
-        int id PK
-        string email
-        datetime created_at
-    }
-    ORDERS {
-        int id PK
-        int user_id FK
-        decimal total
-    }
+    Engine["<b>Kill Switch Engine (State Machine)</b><br/><code>src/core/kill_switch_engine_v0_2.py</code><br/>• Manages state transitions (ACTIVE ↔ ISOLATED ↔ TERMINATED)<br/>• Evaluates triggers (CPU, unauthorized access)<br/>• Enforces security locks"]
+
+    Bridge["<b>Bridge Manager (Execution Layer)</b><br/><code>src/core/bridge_manager_v0_1.py</code><br/>• Manages process registry<br/>• Executes isolation (suspend, revoke network)<br/>• Executes termination (kill, wipe memory)"]
+
+    UI --> Engine
+    Engine --> Bridge
 ```
+
 
 
 ## Project Structure
