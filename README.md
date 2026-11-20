@@ -11,10 +11,10 @@ NUBS (Normal Users Bridge-Switch) is a lightweight, Python-based system designed
 |ACTIVE🟢| ISOLATED🟡|TERMINATED🔴|
 | --- | --- | --- |
 
-Automatic Triggers: CPU monitoring and unauthorized access detection
-Manual Overrides: Admin dashboard for real-time control
-One-Way Termination: Once killed, the system requires a full restart (security guarantee)
-Lightweight: No heavy dependencies, runs on standard Python
+- Automatic Triggers: CPU monitoring and unauthorized access detection
+- Manual Overrides: Admin dashboard for real-time control
+- One-Way Termination: Once killed, the system requires a full restart (security guarantee)
+- Lightweight: No heavy dependencies, runs on standard Python
 
 ## Architecture
 ```mermaid
