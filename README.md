@@ -62,12 +62,12 @@ NUBS/
 **Prerequisites**
 - Python 3.8 or higher
 - pip (Python package manager)
-
-## Installation
-1\. \*\*Clone the repository\*\*:
-&#x20;  ```bash
-&#x20;  git clone https://github.com/hughbreant/NUBS.git
-&#x20;  cd NUBS
+**Installation**
+Clone the repository:
+```bash
+git clone https://github.com/hughbreant/NUBS.git
+cd NUBS
+```
 2\. Install dependencies:
 &#x20;  pip install streamlit
 Running the Dashboard
