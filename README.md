@@ -82,7 +82,7 @@ Launch the NUBS dashboard:
 streamlit run src/ui/dashboard\_app\_v0\_1.py
 ```
 
-The dashboard will open in your browser at http://localhost:8501
+_The dashboard will open in your browser at http://localhost:8501_
 
 ## Usage Guide
 **Understanding the States**
@@ -102,7 +102,7 @@ The dashboard provides three manual control buttons:
 
 *Manual Admin Recovery: Restores the system from ISOLATED to ACTIVE (only available when isolated).
 
-Note: All controls are disabled when the system is TERMINATED.
+_Note: All controls are disabled when the system is TERMINATED._
 
 ## Testing
 Run Unit Tests
@@ -115,16 +115,13 @@ Run End-to-End Test
 
 python tests/test_e2e_v0_1.py
 
-Expected output: 1 comprehensive workflow test passing
+_Expected output: 1 comprehensive workflow test passing_
 
 ## Security Considerations
 Current Security Guarantees
-
-*One-Way Termination: Once TERMINATED, the system cannot be recovered without a full restart.
-
-*rocess Isolation: All managed processes are immediately suspended or killed on state transition.
-
-*Trigger Safety: No triggers can affect a terminated system.
+- One-Way Termination: Once TERMINATED, the system cannot be recovered without a full restart.
+- Process Isolation: All managed processes are immediately suspended or killed on state transition.
+- Trigger Safety: No triggers can affect a terminated system.
 
 ## Future Security Enhancements
 - Add user authentication to the dashboard.
