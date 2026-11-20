@@ -153,7 +153,12 @@ Built for normal users who want control over their AI systems.
 Current Version: v0.8 (Phase 4 Complete)
 
 Last Updated: November 20, 2026
-##
+
+- Main item
+  - Sub-item one
+  - Sub-item two
+    - Sub-sub-item
+
 
 
 
