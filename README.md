@@ -89,12 +89,9 @@ _The dashboard will open in your browser at http://localhost:8501_
 
 ## Dashboard Controls
 The dashboard provides three manual control buttons:
-
-*Simulate CPU Spike (>90%): Triggers automatic isolation (useful for testing).
-
-*Simulate Security Breach: Triggers immediate termination (useful for testing).
-
-*Manual Admin Recovery: Restores the system from ISOLATED to ACTIVE (only available when isolated).
+- Simulate CPU Spike (>90%): Triggers automatic isolation (useful for testing).
+- Simulate Security Breach: Triggers immediate termination (useful for testing).
+- Manual Admin Recovery: Restores the system from ISOLATED to ACTIVE (only available when isolated).
 
 _Note: All controls are disabled when the system is TERMINATED._
 
