@@ -62,8 +62,9 @@ NUBS/
 **Prerequisites**
 - Python 3.8 or higher
 - pip (Python package manager)
+
 **Installation**
-Clone the repository:
+ Clone the repository:
 ```bash
 git clone https://github.com/hughbreant/NUBS.git
 cd NUBS
