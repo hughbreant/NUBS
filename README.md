@@ -36,9 +36,8 @@ Lightweight: No heavy dependencies, runs on standard Python
 │ - Executes isolation (suspend, revoke network) │
 │ - Executes termination (kill, wipe memory) │
 └───────────────────────────────────────────────────┘
-\---
 
-## Project Structure
+```## Project Structure
 NUBS/
 ├── src/
 │ ├── core/
@@ -56,7 +55,7 @@ NUBS/
 ├── scripts/ # Deployment scripts (Phase 5)
 ├── HANDOFF\_v0\_8.md # Project handoff tracker
 └── README.md # This file
-\---
+```
 
 ## Quick Start
 
