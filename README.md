@@ -99,16 +99,16 @@ The dashboard provides three manual control buttons:
 _Note: All controls are disabled when the system is TERMINATED._
 
 ## Testing
-Run Unit Tests
-
+**Run Unit Tests**
+```
 python tests/test_core_v0_1.py
+```
+_Expected output: 9 tests passing_
 
-Expected output: 9 tests passing
-
-Run End-to-End Test
-
+**Run End-to-End Test**
+```
 python tests/test_e2e_v0_1.py
-
+```
 _Expected output: 1 comprehensive workflow test passing_
 
 ## Security Considerations
