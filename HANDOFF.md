@@ -11,21 +11,16 @@ To build a frictionless, AI-assisted personal cybersecurity "bridge/switch" that
 
 ## Phases Checklist
 - [x] **Phase 1:** Project Setup, Naming, Rules & Small Achievable Task (COMPLETE)
-- [x] **Phase 2:** Core Architecture, Threat Modeling & Dashboard UI Design (IN PROGRESS)
-- [ ] **Phase 3:** MVP Backend (Network Isolation & Process Suspension Logic)
+- [x] **Phase 2:** Core Architecture, Threat Modeling & Dashboard UI Design (COMPLETE)
+- [x] **Phase 3:** MVP Backend (Network Isolation & Process Suspension Logic) (IN PROGRESS)
 - [ ] **Phase 4:** MVP Frontend (Dashboard UI Implementation)
 - [ ] **Phase 5:** Integration, VM Testing & Final Handoff
 
 ## Current Phase Status
-**Phase:** 2 - Architecture & Threat Modeling
+**Phase:** 3 - MVP Backend Isolation Logic
 **Status:** IN PROGRESS
 **Last Updated:** 2026-11-20
 
-## Phase 1 Artifacts Generated (Signed Off)
-- [x] `HANDOFF_v0.2.md` -> `HANDOFF_v0.3.md`
-- [x] `docs/phase_1_setup_and_discovery/dashboard_ui_mockup_v0.2.md`
-- [x] `src/core/nubs_simulator_v0.1.py`
-
-## Phase 2 Artifacts Generated
-- [x] `docs/phase_2_architecture_and_threat_model/system_architecture_and_threat_model_v0.1.md`
-- [x] `src/core/network_heuristic_scanner_v0.1.py` (Small Achievable Task)
+## Phase 3 Artifacts Generated
+- [x] `docs/phase_3_mvp_backend/network_isolation_logic_v0.1.md`
+- [x] `src/core/network_isolator_v0.1.py` (Safe Failsafe Firewall MVP)
