@@ -87,10 +87,11 @@ ISOLATED   |    🟡    |   Sandboxed. Network revoked, processes suspended.    
 TERMINATED |    🔴    |   Hard kill. Processes terminated, memory wiped.           | Restart application
 
 
-| Column 1 | Column 2 | Column 3 |
-| --- | --- | --- |
-| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
-| Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
+| State | Indicator | Description | User Action |
+| --- | --- | --- | --- |
+| ACTIVE | 🟢 | Normal operation. Bridge is open, all processes running. | Monitor system |
+| ISOLATED | 🟡 | Sandboxed. Network revoked, processes suspended. | Review logs, perform admin recovery |
+| TERMINATED | 🔴 | Hard kill. Processes terminated, memory wiped. | Restart application |
 
 
 ## Dashboard Controls
