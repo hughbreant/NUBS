@@ -42,3 +42,19 @@ class KillSwitchEngine:
             self.transition_to(NubsState.TERMINATED, "Unauthorized access detected")
         elif cpu_usage > self.resource_threshold_cpu:
             self.transition_to(NubsState.ISOLATED, f"Resource threshold exceeded (CPU: {cpu_usage}%)")
+
+    def reset_system(self, reason: str) -> bool:
+        """Manual system reset - clears TERMINATED lock and re-scans for processes."""
+        if self.current_state != NubsState.TERMINATED:
+            logging.warning("RESET: System is not in TERMINATED state. No reset needed.")
+            return False
+        
+        logging.info(f"SYSTEM RESET: Clearing TERMINATED lock. Reason: {reason}")
+        self.current_state = NubsState.ACTIVE
+        
+        # Re-discover processes (this will find new PIDs if Hermes was reopened)
+        if hasattr(self.bridge_manager, 'discover_and_register_processes'):
+            self.bridge_manager.discover_and_register_processes()
+            logging.info("SYSTEM RESET: Re-scanned OS for target processes.")
+        
+        return True

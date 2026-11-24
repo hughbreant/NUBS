@@ -1,6 +1,8 @@
 import sys
 import os
+import time
 import streamlit as st
+from streamlit_autorefresh import st_autorefresh
 
 # Add src/core to path for imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -8,7 +10,7 @@ core_dir = os.path.abspath(os.path.join(current_dir, '..', 'core'))
 sys.path.insert(0, core_dir)
 
 from kill_switch_engine_v0_2 import KillSwitchEngine, NubsState
-from bridge_manager_v0_1 import BridgeManager
+from bridge_manager_v0_2_real import RealBridgeManager
 
 # Page Configuration
 st.set_page_config(page_title="NUBS Dashboard", page_icon="🛡️", layout="centered")
@@ -19,17 +21,21 @@ st.markdown("---")
 
 # Initialize Session State for Persistence
 if "engine" not in st.session_state:
-    bridge = BridgeManager()
-    # Register some default simulated processes
-    bridge.register_process(1001, "llama_inference_node_1")
-    bridge.register_process(1002, "rag_retrieval_agent")
-    bridge.register_process(1003, "vector_db_connector")
-    
+    bridge = RealBridgeManager(target_process_name="Hermes")
+    bridge.discover_and_register_processes()
     st.session_state.engine = KillSwitchEngine(bridge_manager=bridge)
 
 engine = st.session_state.engine
 bridge = engine.bridge_manager
 current_state = engine.get_state()
+
+# Auto-refresh every 5 seconds to detect process changes
+# This will trigger a rerun every 5 seconds
+count = st_autorefresh(interval=5000, key="datarefresh")
+
+# Re-discover processes on each auto-refresh (only if not TERMINATED)
+if current_state != NubsState.TERMINATED:
+    bridge.discover_and_register_processes()
 
 # --- State Display ---
 st.header("System Status")
@@ -54,11 +60,14 @@ st.header("Managed Processes")
 if current_state == NubsState.TERMINATED:
     st.info("Process registry locked due to termination.")
 else:
-    cols = st.columns(3)
-    for i, proc in enumerate(bridge.managed_processes):
-        with cols[i % 3]:
-            status = "🟢 Running" if proc.is_running else "🔴 Suspended/Killed"
-            st.metric(label=f"PID: {proc.pid}", value=proc.name, delta=status)
+    if len(bridge.managed_processes) == 0:
+        st.warning("No target processes detected. Waiting for Hermes to start...")
+    else:
+        cols = st.columns(3)
+        for i, proc in enumerate(bridge.managed_processes):
+            with cols[i % 3]:
+                status = "🟢 Running" if proc.is_running else "🔴 Suspended/Killed"
+                st.metric(label=f"PID: {proc.pid}", value=proc.name, delta=status)
 
 st.markdown(f"**Network Bridge:** {'🟢 Active' if bridge.network_bridge_active else '🔴 Revoked'}")
 st.markdown(f"**Memory Wiped:** {'Yes' if bridge.memory_wiped else 'No'}")
@@ -84,6 +93,12 @@ with col3:
         engine.transition_to(NubsState.ACTIVE, "Manual admin override via Dashboard")
         st.rerun()
 
+# NEW: Reset System button (only appears when TERMINATED)
 if current_state == NubsState.TERMINATED:
     st.markdown("---")
-    st.info("⚠️ **System Locked:** To recover from a TERMINATED state, please restart the NUBS application entirely.")
+    st.warning("⚠️ **System Locked:** Kill switch engaged. To re-arm the system, click Reset below.")
+    
+    if st.button("🔄 Reset System & Re-Scan for Processes"):
+        engine.reset_system("Manual reset via Dashboard - re-arming kill switch")
+        st.success("✅ System reset complete. Re-scanning for target processes...")
+        st.rerun()
