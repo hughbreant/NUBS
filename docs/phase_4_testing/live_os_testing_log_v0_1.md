@@ -66,8 +66,8 @@ NUBS was successfully upgraded from a mock simulation to a **real OS-level proce
 ## 5. Technical Implementation Details
 
 ### Dependencies Added
-- **psutil==5.9.0
-- **streamlit-autorefresh==1.0.1
+- **psutil==5.9.0**
+- **streamlit-autorefresh==1.0.1**
 
 ### Code Architecture
 - **Separation of Concerns**: Real OS logic isolated in `bridge_manager_v0_2_real.py`
